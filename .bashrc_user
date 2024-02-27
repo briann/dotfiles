@@ -9,12 +9,12 @@ if [ -f /proc/sys/fs/binfmt_misc/WSLInterop ]; then
     alias scp='scp.exe'
 fi
 
-# Shell customizations
-[ -f /home/linuxbrew/.linuxbrew/etc/profile.d/bash-preexec.sh ] && . /home/linuxbrew/.linuxbrew/etc/profile.d/bash-preexec.sh
-eval "$(starship init bash)"
-eval "$(atuin init bash)"
-
 # Tooling
 eval "$(/home/brian/.local/bin/mise activate bash)"
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 . "$HOME/.cargo/env"
+
+# Shell customizations
+[ -f /home/linuxbrew/.linuxbrew/etc/profile.d/bash-preexec.sh ] && . /home/linuxbrew/.linuxbrew/etc/profile.d/bash-preexec.sh
+eval "$(starship init bash)"
+eval "$(atuin init bash)"
